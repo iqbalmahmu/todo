@@ -5,6 +5,7 @@ const todoList = document.querySelector(".todo-list");
 
 // Eventlistner
 todoBtn.addEventListener("click", addTodo);
+todoList.addEventListener("click", removeTodo);
 // Function
 
 function addTodo(event) {
@@ -19,8 +20,8 @@ function addTodo(event) {
 
   const todoLi = document.createElement("li");
   // todoLi.classList.add("todo-item");
-  // todoLi.innerText = "my name is khan";
-  todoLi.classList.add("todo-item");
+  todoLi.innerText = todoInput.value;
+  todoLi.classList.add("todo-items");
   todoDiv.appendChild(todoLi);
 
   // add checked mark button
@@ -38,4 +39,17 @@ function addTodo(event) {
   todoDiv.appendChild(delateBtn);
   // append todoList
   todoList.appendChild(todoDiv);
+
+  // clear todo values
+
+  todoInput.value = "";
+}
+
+function removeTodo(event) {
+  const item = event.target;
+  if (item.classList[0] === "checked") {
+    item.remove();
+  }
+  const dltI = item.parentElement;
+  dltI.remove();
 }
