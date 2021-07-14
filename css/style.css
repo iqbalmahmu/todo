@@ -5,3 +5,50 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-image: linear-gradient(
+    60deg,
+    #fff,
+    rgba(211, 178, 178, 0.726),
+    rgba(27, 22, 22, 0.623)
+  );
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* .container {
+  width: 900px;
+  margin: 0 auto;
+} */
+
+header {
+  font-size: 1.5rem;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  font-size: 2rem;
+  padding: 0.5rem;
+  background: #fff;
+}
+
+form button {
+  color: #fff;
+  background: green;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+form button:hover {
+  background: #fff;
+  color: green;
+}

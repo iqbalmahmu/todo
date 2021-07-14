@@ -1,3 +1,14 @@
-const name = "foysal";
+// Selectors
+const todoInput = document.querySelector(".todo-input");
+const todoBtn = document.querySelector(".todo-btn");
+const todoList = document.querySelector(".todo-list");
 
-console.log(name);
+// Eventlistner
+todoBtn.addEventListener("click", addTodo);
+// Function
+
+function addTodo(event) {
+  // prevent form from submitting
+
+  event.preventDefault();
+}
