@@ -39,10 +39,15 @@ function addTodo(event) {
 function removeTodo(event) {
   var item = event.target;
 
-  if (item.classList[0] === "checked") {
-    item.remove();
-  }
+  if (item.classList[0] === "delated") {
+    // item.remove();
+    var dltI = item.parentElement;
+    dltI.remove();
+  } // checklist
 
-  var dltI = item.parentElement;
-  dltI.remove();
+
+  if (item.classList[0] === "checked") {
+    var check = item.parentElement;
+    check.toggle();
+  }
 }

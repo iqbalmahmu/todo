@@ -47,9 +47,16 @@ function addTodo(event) {
 
 function removeTodo(event) {
   const item = event.target;
-  if (item.classList[0] === "checked") {
-    item.remove();
+  if (item.classList[0] === "delated") {
+    // item.remove();
+
+    const dltI = item.parentElement;
+    dltI.remove();
   }
-  const dltI = item.parentElement;
-  dltI.remove();
+
+  // checklist
+  if (item.classList[0] === "checked") {
+    const check = item.parentElement;
+    check.toggle();
+  }
 }
